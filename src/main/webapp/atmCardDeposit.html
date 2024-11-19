@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Card Details Form</title>
+    <link rel="stylesheet" href="atmCardDeposit.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>ATM Card Details</h2>
+    <form id="atmCardForm">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter your card number" maxlength="16" required>
+        <span class="error-message" id="cardNumberError"></span>
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" maxlength="3" required>
+        <span class="error-message" id="cvvError"></span>
+
+        <label for="expiryDate">Expiry Date</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+        <span class="error-message" id="expiryDateError"></span>
+
+        <label for="cardHolderName">Card Holder Name</label>
+        <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Enter cardholder name" pattern="[a-zA-Z ]+" required>
+        <span class="error-message" id="cardHolderNameError"></span>
+        
+        <label for="pin">Pin</label>
+        <input type="password" id="pin" name="pin" placeholder="Enter the pin" required>
+        <span class="error-message" id="pinError"></span>
+
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" min="1" pattern="[1-9]\d*" required>
+        <span class="error-message" id="amountError">Amount must be greater than zero and should be a whole number!</span>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div id="errorPage">
+
+	<h2></h2>
+
+
+</div>
+
+<script src="atmCardDeposit.js"></script>
+</body>
+</html>

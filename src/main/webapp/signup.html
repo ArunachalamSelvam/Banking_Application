@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+<link rel="stylesheet" href="signUp.css">
+<script src="signUp.js" defer></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"
+    integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="signUpForm">
+            <h2>Sign Up</h2>
+
+            <h3>Customer Information</h3>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            <span class="errorMessage" id="firstNameError"></span>
+
+            <label for="middleName">Middle Name:</label>
+            <input type="text" id="middleName" name="middleName" placeholder="Middle Name">
+            <span class="errorMessage" id="middleNameError"></span>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required> 
+            <span class="errorMessage" id="lastNameError"></span>
+            
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" placeholder="Father's Name" required> 
+            <span class="errorMessage" id="fatherNameError"></span>
+
+            <label for="motherName">Mother's Name:</label>
+            <input type="text" id="motherName" name="motherName" placeholder="Mother's Name" required> 
+            <span class="errorMessage" id="motherNameError"></span>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select> 
+            <span class="errorMessage" id="genderError"></span>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required>
+            <span class="errorMessage" id="mobileNoError"></span>
+
+            <label for="adharNumber">Aadhar Number:</label>
+            <input type="text" id="adharNumber" name="adharNumber" placeholder="Aadhar Number" required> 
+            <span class="errorMessage" id="adharNoError"></span>
+            
+            <label for="panNumber">PAN Number:</label>
+            <input type="text" id="panNumber" name="panNumber" placeholder="PAN Number" required>
+            <span class="errorMessage" id="panNoError"></span>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <span class="errorMessage" id="passwordError"></span>
+
+            <h3>Address Information</h3>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Address" required> 
+            <span class="errorMessage" id="addressError"></span>
+
+            <label for="countryId">Country:</label> 
+            <select id="countryId" name="countryId" required>
+                <option value="">Select Country</option>
+            </select> 
+            <span class="errorMessage" id="countryError"></span>
+
+            <label for="stateId">State:</label> 
+            <select id="stateId" name="stateId" required>
+                <option value="">Select State</option>
+            </select> 
+            <span class="errorMessage" id="stateError"></span>
+
+            <div>
+                <label for="userPhoto">User Photo:</label> 
+                <input type="file" id="userPhotoInput" style="display: none;">
+                <button type="button" id="addPhotoButton">Add Photo</button>
+                <br>
+                <video id="video" width="320" height="240" autoplay style="display: none;"></video>
+                <canvas id="canvas" width="320" height="240" style="display: none;"></canvas>
+            </div>
+
+            <input type="hidden" id="photoData" name="photoData">
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

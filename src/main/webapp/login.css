@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color : #ECF0F1;
+}
+
+/* Body Styling */
+body {
+   /*  background: linear-gradient(120deg, #2980b9, #8e44ad);*/ 
+   background-color : #F7F9F9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*color: #fff;*/
+    color : black;
+    
+}
+
+/* Container Styling */
+.container {
+	
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: #2C3E50;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color : #ECF0F1;
+    
+}
+
+/* Login Box Styling */
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Input Field Styling */
+.user-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    /*color: #fff;*/
+    color: #ECF0F1;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    /*color: #fff;*/
+     color: #ECF0F1;
+    
+}
+
+/* Label Animation on Focus or Valid Input */
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+ color: #ECF0F1;
+    font-size: 12px;
+}
+
+/* Button Styling */
+.login-button {
+    text-decoration: none;
+    background: #16A085  ;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    width: 320px;
+    height: 50px;
+    font-size: larger;
+}
+
+.login-button:hoverr {
+    background: rgb(56, 121, 129) ;
+}
+
+/* Sign-Up Text Styling */
+.signup-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* .signup-text a {
+    color: black;
+    
+} */
+
+.signup-text a:hover {
+    text-decoration: none;
+}
+
+.signup-text a:link {
+    color : green;
+}
+
+.forgetPassword{
+	display : block;
+	margin-top : 5%;
+	text-align : center
+}
+
+.forgetPassword:link {
+	color : green;
+}

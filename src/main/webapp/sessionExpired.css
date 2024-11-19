@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.container{
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+a{
+    background-color: lightgrey ;
+    color: blue;
+    padding:10px;
+    text-decoration: none;
+}

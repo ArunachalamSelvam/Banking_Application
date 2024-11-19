@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --header-font-color : grey;
+    --header-font-size : 1.25em;
+    --body-background-color : #F7F9F9;
+    --round-toggle-on-bgColor : #383838;
+    --round-toggle-off-bgColor : #989494;
+    --font-family : "Montserrat", sans-serif;
+    
+}
+.container {
+    width: 80%;
+    margin: auto;
+    perspective: 1000px; 
+}
+
+.card {
+    width: 330px;
+    height: 470px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s; 
+    color : white;
+    margin-top : 40px;
+}
+
+.atmCardFrontSide, .atmCardBackSide {
+    width: 330px;
+    height: 470px;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden; 
+    cursor : pointer;
+}
+
+.atmCardFrontSide {
+    background-color: coral;
+}
+
+.atmCardBackSide {
+    background-color: coral;
+     transform: rotateY(180deg); 
+}
+
+.flipped {
+    transform: rotateY(180deg); 
+}
+
+.bankName {
+    width: 31%;
+    height: 21%;
+    /* background-color: rgb(25, 25, 222); */
+    color: white;
+    position: absolute;
+    /*padding: 3px;*/
+    text-align: center;
+    top: 0px;
+    left: 30px;
+}
+
+.J {
+    position: absolute;
+    font-size: 600px;
+    color: #f85e26;
+    top: -180px;
+    left: 80px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#userName {
+    color: white;
+    margin-left: 20px;
+}
+
+.wifi {
+    margin-right: 50px;
+    transform: rotate(90deg);
+    margin-bottom: 20px;
+}
+
+.nameAndIcon {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 430px;
+}
+
+.section1 {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.expiryAndCVV {
+    width: 40%;
+    height: 50px;
+    margin-left: 30px;
+    
+}
+
+.cardNo {
+    width: 20%;
+    height: 120px;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+    margin-right: 50px;
+   
+}
+
+.expiryDateDiv {
+    width: 25%;
+    height: 40px;
+    background: none;
+    border: none;
+    
+}
+
+.expiryDate {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.cvvDiv {
+    width: 25%;
+    height: 40px;
+    background: none;
+   
+    margin-top: 20px;
+}
+
+.cvv {
+    width: 40px;
+    font-size: 20px;
+}
+
+.viewCvv {
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
+.cvvValue {
+    display: flex;
+    flex-direction: row;
+}
+
+.copy{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    position : absolute;
+}
+
+
+.ex {
+    margin-top: 5px;
+}
+
+.visa {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, silver, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position : absolute;
+    bottom : 40px;
+    right : 30px;
+}
+
+
+.instructionDiv{
+    position: absolute;
+    width: 161px;
+    bottom: 0px;
+    left: 32px;
+    transform-style: preserve-3d;
+    
+    
+}
+.instruction1 {
+    color: gainsboro;
+    width: 161px;
+    /* border: 1px solid black; */
+    position: absolute;
+    bottom: -38px;
+    left: 50px;
+    backface-visibility: hidden;
+}
+
+.instruction2{
+    color: gainsboro;
+    width: 161px;
+    /* border: 1px solid black; */
+    position: absolute;
+    bottom: -38px;
+    left: 50px;
+    transform : rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.optionContainer{
+	 width: 330px;
+	 height: 150px;
+	 margin : auto;
+	 margin-top : 60px;
+}
+.options{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+.round{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #b0b0b0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor : pointer;
+}
+
+
+
+
+.optionsText {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+.details{
+    /* width: 57%; */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    color: #b0b0b0;;
+    
+}
+
+#responseMessageDiv {
+	position: absolute;
+    top: 10px;
+    left: 22%;
+    width: 56%;
+    height: 4em;
+    background-color: var(--round-toggle-on-bgColor);
+    color: var(--body-background-color);
+    /*  justify-content: center;
+    align-items: center;*/
+    padding: 2em;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 1000;
+    line-height : 0em;
+    /*  transform: translateY(-30px);*/
+}
+
+
+#responseMessageDiv.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* End position */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+

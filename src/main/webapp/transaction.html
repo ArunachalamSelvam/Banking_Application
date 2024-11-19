@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send Money</title>
+<link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Send Money</h1>
+		<form id="sendMoneyForm">
+			<label for="method">Send via:</label> <select id="method"
+				name="method" required>
+				<option value="">Select Option</option>
+				<option value="mobileNo">Mobile Number</option>
+				<option value="accountNo">Account Number</option>
+			</select>
+
+			<div id="mobileNoInput" class="input-group hidden">
+				<label for="mobileNo">Mobile Number:</label> <input type="text"
+					id="mobileNo" name="mobileNo" placeholder="Enter mobile number">
+			</div>
+
+			<div id="accountNoInput" class="input-group hidden">
+				<label for="receiverAccountNo">Receiver Account Number:</label> <input
+					type="text" id="receiverAccountNo" name="receiverAccountNo"
+					placeholder="Enter receiver account number">
+			</div>
+
+			<div class="input-group">
+				<label for="amount">Amount:</label> <input type="number" id="amount"
+					name="amount" placeholder="Enter amount" required>
+			</div>
+
+			<!-- div class="input-group">
+				<label for="password">Password:</label> <input type="password"
+					id="password" name="password" placeholder="Enter your password"
+					required>
+			</div> -->
+			<button type="submit">Send Money</button>
+		</form>
+	</div>
+
+	<script src="transaction.js"></script>
+</body>
+</html>

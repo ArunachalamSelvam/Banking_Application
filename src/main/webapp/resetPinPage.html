@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset PIN</title>
+    <link rel="stylesheet" href="resetPin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reset Your PIN</h1>
+        <form id="resetPinForm">
+            <label for="oldPin">Old PIN:</label>
+            <input type="password" id="oldPin" name="oldPin" required>
+
+            <label for="newPin">New PIN:</label>
+            <input type="password" id="newPin" name="newPin" required>
+
+            <label for="confirmPin">Confirm New PIN:</label>
+            <input type="password" id="confirmPin" name="confirmPin" required>
+
+            <button type="submit">Reset PIN</button>
+            <p id="message"></p>
+        </form>
+    </div>
+    <script src="resetPinPage.js"></script>
+</body>
+</html>

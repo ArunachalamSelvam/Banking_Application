@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <session-config/>
+  <filter>
+    <filter-name>authenticate</filter-name>
+    <filter-class>com.banking.filter.AuthenticateFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>authenticate</filter-name>
+   <!--  <url-pattern>/api/*</url-pattern>
+    <url-pattern>/transaction.html</url-pattern>
+    <url-pattern>/transactionHistory.html</url-pattern>
+    <url-pattern>/dashboard.html</url-pattern>
+    <url-pattern>/atmCard.html</url-pattern>
+    <url-pattern>/resetPinPage.html</url-pattern> -->
+    <!-- <url-pattern>/signup.html</url-pattern> -->
+        <url-pattern>/home.html</url-pattern>
+    
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SavingsAccountServlet</display-name>
+    <servlet-name>SavingsAccountServlet</servlet-name>
+    <servlet-class>com.banking.controller.SavingsAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SavingsAccountServlet</servlet-name>
+    <url-pattern>/SavingsAccountServlet</url-pattern>
+  </servlet-mapping>
+  <display-name>Banking_Project</display-name>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>OtpServlet</display-name>
+    <servlet-name>OtpServlet</servlet-name>
+    <servlet-class>com.banking.controller.OtpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OtpServlet</servlet-name>
+    <url-pattern>/OtpServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VerifyOtpServlet</display-name>
+    <servlet-name>VerifyOtpServlet</servlet-name>
+    <servlet-class>com.banking.controller.VerifyOtpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VerifyOtpServlet</servlet-name>
+    <url-pattern>/VerifyOtpServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CustomerVerifyServlet</display-name>
+    <servlet-name>CustomerVerifyServlet</servlet-name>
+    <servlet-class>com.banking.controller.CustomerVerifyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerVerifyServlet</servlet-name>
+    <url-pattern>/CustomerVerifyServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: white;
+   height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    background: rgb(211 211 211 / 50%);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color:black;
+}
+
+/* Header Styling */
+.header h1 {
+    /*color: #fff;*/
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.balance-box {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    /*color: #fff;*/
+    position: relative;
+}
+
+.balance-box h2 {
+    margin-bottom: 20px;
+}
+
+#checkBalance {
+    background: #03e9f4;
+    padding: 10px 20px;
+    /*color: #fff;*/
+    border-radius: 5px;
+    transition: 0.5s;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border: none;
+}
+
+#checkBalance:hover {
+    background: #0398e9;
+}
+
+/* Actions Section Styling */
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-button {
+    text-decoration: none;
+    background: #03e9f4;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.action-button:hover {
+    background: #0398e9;
+}
+
+/* Transaction History Styling */
+.transaction-history {
+    margin-top: 30px;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+#filterSelect {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.date-picker {
+    margin-top: 10px;
+}
+
+.date-picker input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.date-picker button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.date-picker button:hover {
+    background-color: #0056b3;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+#customDatePicker {
+    display: none;
+}
